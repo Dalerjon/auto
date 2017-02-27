@@ -1,0 +1,68 @@
+DirectoryIndex index index.php
+DirectorySlash off
+Options -Indexes -MultiViews
+# Rules
+# arzone.tj/
+# arzone.tj/index.php -> arzone.tj
+# arzone.tj	-> arzone.tj/
+# arzone.tj/file/ -> arzone.tj/file.html
+# arzone.tj/file  -> arzone.tj/file.html
+# arzone.tj/dir/file ->arzone.tj/dir/file.html
+# arzone.tj/dir/file/ -> arzone.tj/dir/file.html
+# no ending slashes
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} \.(css|jpg|gif|png|zip|rar|doc|xls|js|tif|tiff|docx|xlsx|ico)$|test\.php$
+    RewriteRule ^(.*)$ $1 [L,QSA]
+
+# nothing to do there in subrequests
+RewriteCond %{ENV:NS}	!=1
+RewriteCond %{IS_SUBREQ} =true
+    RewriteRule (.*) $1 [L,QSA]
+#do NS=0?
+
+
+RewriteCond %{REQUEST_URI} ^/index$ [OR]
+RewriteCond %{REQUEST_URI} ^/index[.]+(\w+)$
+    RewriteRule . / [R=301,L]
+
+# remove trailing slashes
+# if want external redirect use correct external redir [R=301,L] or [R=301] for correct internal or simple redir [L]
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} (.*)/$
+    RewriteRule . %1.html [R=301,L,E=NS:1,QSA]
+
+# if whants .html endings
+RewriteCond %{REQUEST_URI} !^(.+)\.(html|php)$
+    RewriteRule . %{REQUEST_URI}.html [R=301,L]
+
+# fix multidots in endings (missed language) index..html instead of index.en.html
+RewriteCond %{REQUEST_URI} ^(.+)\.\.+(\w+)$
+    RewriteRule . %1.%2 [R=301,L]
+# otherways
+#RewriteCond %{REQUEST_URI} (.+)\.(html|php)$
+#	RewriteRule . %1 [R=301,L]
+
+# any php filename in root dir
+# this makes secure loses
+RewriteCond %{REQUEST_URI} ^[\w\-.]+$
+RewriteCond %{REQUEST_FILENAME} (.*)\.(html|php)$
+RewriteCond %1.php -s [OR]
+RewriteCond %1.html -s
+    RewriteRule . %1.%2 [L,QSA]
+
+php_value upload_max_filesize 5M
+php_value post_max_size 32M
+
+AddDefaultCharset utf-8
+AddCharset utf-8 *
+<IfModule mod_charset.c>
+    CharsetSourceEnc utf-8
+    CharsetDefault utf-8
+</IfModule>
+
+php_value max_execution_time 180
+php_value max_input_time 180
+php_flag short_open_tag On

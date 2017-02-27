@@ -1,0 +1,349 @@
+@import url('reset.css'); 
+ @import url('typography.css');
+
+body {
+ background-color: #f8f8f8;
+ margin: auto;
+ width: 100%;
+ }
+ 
+ div#status-bar {
+ background: url('../img/status-bar-bg.png') repeat-x;
+ border-bottom: 2px groove #ffffff;
+ height: 40px;
+ width: 100%;
+ }
+ 
+ div#status-bar-content {
+ margin: 10px auto 0px auto;
+ width: 800px;
+ }
+ 
+ p#welcome {
+ float:left; 
+ padding-top: 7px;
+ width: 150px;
+ }
+ 
+ p#action-bar {
+ background: url('../img/action-bar-bg.png') no-repeat;
+ height: 14px;
+ margin-left:600px;
+ padding: 8px 10px;
+ width: 180px;
+ color: #525252;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ }
+ 
+ p#action-bar a:before { 
+ content: '| ';
+ }
+
+ p#action-bar a[title="Help"]:after {
+ content: ' |';
+ }
+ 
+ 
+ div#header {
+ background: url('../img/header-image.jpg') no-repeat center;
+ background-color: #505050;
+ border-bottom: 1px ridge #ffffff;
+ height: 150px;
+ width: 100%;
+ }
+ 
+ div#header-content{
+  margin: auto;
+ padding-top: 50px;
+  width: 800px;
+  
+ }
+ div#logo {
+ margin: auto;
+ width: 300px;
+ float:left;
+ }
+ 
+ div#content {
+ margin: auto;
+ padding-bottom: 50px;
+ position: relative;
+ width: 1024px;
+ }
+ 
+div#view {
+ background-color: #ffffff;
+ border: 1px solid #bababa;
+ clear: both;
+ height: auto;
+ margin-top: 60px;
+ overflow: hidden;
+ padding: 15px;
+ width: 868px;
+ }
+ 
+ div#photo-show {
+ border: 1px solid #b2b2b2;
+ float: left;
+ padding: 10px;
+ width: 400px;
+ height:380px;
+ }
+ 
+ div#info-main {
+border: 1px solid #b2b2b2;
+ margin-left: 420px;
+ padding: 10px;
+ width: 400px;
+ height:380px;
+ }
+ 
+ div#contacts {
+ border: 1px solid #b2b2b2;
+ float: left;
+ padding: 10px;
+ width: 400px;
+ height:auto;
+ }
+ 
+ div#info-specials {
+border: 1px solid #b2b2b2;
+ margin-left: 420px;
+ padding: 10px;
+ width: 400px;
+ height:auto;
+ }
+ 
+ div#adding {
+border: 1px solid #b2b2b2;
+margin-left: 420px;
+ padding: 10px;
+ width: 400px;
+ height:auto;
+ }
+ 
+ 
+ 
+ ul#tabs li a {
+ display: block;
+ height: 100%;
+ text-indent: -9000px;
+ width: 100%;
+ }
+ 
+ ul#tabs li#search {
+ background-position: 0px 0px;
+ width:85px;
+ }
+
+ ul#tabs li#search:hover {
+ background-position: 0px -55px;
+ }
+ 
+ ul#tabs li#search.current, ul#tabs li#search:active {
+ background-position: 0px -110px;
+ }
+ 
+ ul#tabs {
+ margin-top: 30px;
+ position: absolute;
+ left: 0px;
+ top: -80px;
+ }
+
+ ul#tabs li {
+ background: url('../img/tabs-sprite.png') no-repeat;
+ float: left;
+ height:50px;
+ margin-right: 5px;
+ width: 80px;
+ }
+
+ ul#tabs li a {
+ display: block;
+ height: 100%;
+ text-indent: -9000px;
+ width: 100%;
+ }
+ 
+ ul#tabs li#search {
+ background-position: 0px 0px;
+ width:80px;
+ }
+
+ ul#tabs li#search:hover {
+ background-position: 0px -55px;
+ }
+
+ ul#tabs li#search.current, ul#tabs li#search:active {
+ background-position: 0px -110px;
+ }
+ 
+ ul#tabs li#offer {
+ background-position: -80px 0px;
+ }
+
+ ul#tabs li#offer:hover {
+ background-position: -80px -55px;
+ }
+
+ ul#tabs li#offer.current, ul#tabs li#offer:active {
+ background-position: -80px -110px;
+ }
+ 
+ ul#tabs li#info {
+ background-position: -160px 0px;
+ }
+
+ ul#tabs li#info:hover {
+ background-position: -160px -55px;
+ }
+
+ ul#tabs li#info.current, ul#tabs li#info:active {
+ background-position: -160px -110px;
+ }
+ 
+ ul#tabs li#mysalon {
+ background-position: -240px 0px;
+ }
+
+ ul#tabs li#mysalon:hover {
+ background-position: -240px -55px;
+ }
+
+ ul#tabs li#mysalon.current, ul#tabs li#mysalon:active {
+ background-position: -240px -110px;
+ }
+ 
+ ul#tabs li#contact {
+ background-position: -320px 0px;
+ }
+
+ ul#tabs li#contact:hover {
+ background-position: -320px -55px;
+ }
+
+ ul#tabs li#contact.current, ul#tabs li#contact:active {
+ background-position: -320px -110px;
+ }
+ 
+   
+ div#footer-image {
+ background: url('../img/footer-image.png') no-repeat #6eb9cc center;
+ border-top: 2px groove #ffffff;
+ border-bottom:2px ridge #ffffff;
+ height:50px;
+ width:100%;
+ }
+ 
+ p#footer-text {
+ background: url('../img/content-top-shadow.png') repeat-x;
+ height: 37px;
+ padding-top: 13px;
+ width: 100%;
+ }
+ 
+ div#border-line{
+	width 380;
+	height:0px;
+	padding: 0px;
+	border: 1px solid #bababa;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	} 
+
+ /*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:hidden;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* 
+    Example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay{background:url(../img/overlay.png) 0 0 repeat;}
+#colorbox{}
+    #cboxTopLeft{width:21px; height:21px; background:url(../img/controls.png) -100px 0 no-repeat;}
+    #cboxTopRight{width:21px; height:21px; background:url(../img/controls.png) -129px 0 no-repeat;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(../img/controls.png) -100px -29px no-repeat;}
+    #cboxBottomRight{width:21px; height:21px; background:url(../img/controls.png) -129px -29px no-repeat;}
+    #cboxMiddleLeft{width:21px; background:url(../img/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(../img/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(../img/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(../img/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0px; background:url(../img/controls.png) -75px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious.hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(../img/controls.png) -50px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext.hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background:url(../img/loading_background.png) center center no-repeat;}
+        #cboxLoadingGraphic{background:url(../img/loading.gif) center center no-repeat;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(../img/controls.png) -25px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose.hover{background-position:-25px -25px;}
+
+/*
+    The following fixes png-transparency for IE6.  
+    It is also necessary for png-transparency in IE7 & IE8 to avoid 'black halos' with the fade transition
+    
+    Since this method does not support CSS background-positioning, it is incompatible with CSS sprites.
+    Colorbox preloads navigation hover classes to account for this.
+    
+    !! Important Note: AlphaImageLoader src paths are relative to the HTML document,
+    while regular CSS background ../images are relative to the CSS document.
+*/
+.cboxIE #cboxTopLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../img/internet_explorer/borderTopLeft.png, sizingMethod='scale');}
+.cboxIE #cboxTopCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../img/internet_explorer/borderTopCenter.png, sizingMethod='scale');}
+.cboxIE #cboxTopRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../img/internet_explorer/borderTopRight.png, sizingMethod='scale');}
+.cboxIE #cboxBottomLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../img/internet_explorer/borderBottomLeft.png, sizingMethod='scale');}
+.cboxIE #cboxBottomCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../img/internet_explorer/borderBottomCenter.png, sizingMethod='scale');}
+.cboxIE #cboxBottomRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../img/internet_explorer/borderBottomRight.png, sizingMethod='scale');}
+.cboxIE #cboxMiddleLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../img/internet_explorer/borderMiddleLeft.png, sizingMethod='scale');}
+.cboxIE #cboxMiddleRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../img/internet_explorer/borderMiddleRight.png, sizingMethod='scale');}
+
+
+ul{list-style-type:none;}
+img{border:1;}
+a:focus{outline:none;}
+#slide1{width:402px; float:left; display:inline; position:relative;}
+
+
+#desc1,#desc2{width:400px;}
+.descriptions{position:absolute; left:0; bottom:0; z-index:12; margin:0 !important; float:left; display:inline;}
+.descriptions li{display:none; background:url(../img/trans.png) repeat; width:410px; padding:0px 0px; float:left; diaplay:inline;position:absolute; bottom:0; z-index:13;}
+.descriptions p{font-size:1.2em;}
+.img_cont{width:400px; height:300px; float:left; display:inline;position:relative;border:#000 1px solid;}/*should be the same size as your large image */
+.main_images{width:400px; height:300px; float:left; display:inline;}/*should be the same size as your large image */
+.main_images li{width:400px; position:absolute; left:0px; top:0px;  display:inline; height:315px; display:none;z-index:11; }/*should be the same size as your large image */
+.slideshow{position:relative;}
+.thumb_holder{position:relative; float:left; width:340px;overflow:hidden; height:60px;margin:5px 0 0 0;}
+.thumbs{position:absolute;left:0; }
+.section{width:400px;float:left; display:inline;overflow:hidden;}
+.section li{float:left; display:inline; margin:0px 3px; width:80px; height:60px; background-color:#000;}/*should be the same size as your thumbnails */
+.sub_section{float:left; display:inline;} 
+.prev_btn{width:25px; float:left; display:inline;margin:5px 0 0 0; padding-left:5px}
+.next_btn{width:25px; float:left; display:inline;margin:5px 0 0 0; padding-left:3px}
+.current_desc{display:inline;}
+
+/*demo styles you can delete these*/
+#wrapper{width:400px;  padding:0px 0px;margin:0 0;}
+h1{color:#000; margin-bottom:.4em; text-align:center;text-transform:uppercase;}
+.photo_credits, .photo_credits a{ font-family:Georgia, "Times New Roman", Times, serif;font-size:1.2em; color:#B22121; font-style:italic; text-align:center; margin-bottom:1.2em;}
+.photo_credits span{text-transform:uppercase; letter-spacing:2px; font-style:normal!important; }
+  
+ 

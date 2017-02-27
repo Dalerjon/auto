@@ -1,0 +1,25 @@
+.title { 
+position:relative !important; 
+padding:5px 10px !important; 
+font:12px Tahoma !important; 
+margin-bottom:0px !important; 
+color:#fff !important; width:220px !important; 
+background:#00aa32 url(img/bg-title-green-240.gif) no-repeat !important; 
+border-bottom:2px solid #00902a !important; }
+.title a { color:#fff !important; }
+.title p { padding:0 !important; }
+.title p.lnk { position:absolute !important; top:5px !important; right:9px !important; color:#00902a !important; }
+.title p.lnk a { display:block !important; float:left !important; }
+
+.news {
+padding-right:10px;
+}
+#outerContainer { width:100%; height:100px; margin:auto; position:relative; }
+#imageScroller { width:100%; height:100px; position:relative; background:#fff; }
+#viewer { width:70%; height:90px; overflow:hidden; margin:auto; position:relative; top:10px; }
+#imageScroller a:active, #imageScroller a:visited { color:#fff; }
+#imageScroller a img { border:0; }
+
+#controls a { width:37px; height:35px; position:absolute; top:3px; }
+#controls a:active, #controls a:visited { color:#0d0d0d; }
+#title { color:#ffffff; font-family:arial; font-size:100%; font-weight:bold; width:100%; text-align:center; margin-top:10px; }

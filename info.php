@@ -1,0 +1,1 @@
+<a href="img/orig.png" class='cboxElement'> <img src="img/max.png"/></a>
